@@ -1,0 +1,155 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f3e46;
+  color: white;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand {
+  margin: 0;
+  font-size: 20px;
+  color: #00b4d8;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 6px 12px;
+  transition: 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: #00b4d8;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.welcome-text {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.logout-btn,
+.login-btn {
+  background-color: #00b4d8;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.logout-btn:hover,
+.login-btn:hover {
+  background-color: #0096c7;
+}
+
+.page-container {
+  padding: 24px;
+  flex: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .navbar-left {
+    gap: 12px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .welcome-text {
+    font-size: 14px;
+    flex-basis: 100%;
+    margin-bottom: 6px;
+  }
+
+  .logout-btn,
+  .login-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .page-container {
+    padding: 16px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .logout-btn,
+  .login-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .page-container {
+    padding: 12px 8px;
+  }
+}

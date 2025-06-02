@@ -1,0 +1,155 @@
+.logs-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px 25px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logs-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.no-logs {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  padding: 40px 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.logs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  font-size: 16px;
+  color: #333;
+  min-width: 700px;
+}
+
+.logs-table thead tr {
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.logs-table th,
+.logs-table td {
+  padding: 14px 18px;
+  vertical-align: middle;
+}
+
+.logs-table thead th:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.logs-table thead th:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.log-row {
+  background-color: #f8f9ff;
+  transition: background-color 0.3s ease;
+  border-radius: 12px;
+}
+
+.log-row:hover {
+  background-color: #e0e7ff;
+  cursor: default;
+}
+
+.message-cell {
+  max-width: 350px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.status-cell {
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  padding: 6px 12px;
+  color: white;
+  user-select: none;
+  width: 90px;
+}
+
+.status-cell.sent {
+  background-color: #28a745; /* green */
+}
+
+.status-cell.failed {
+  background-color: #dc3545; /* red */
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .logs-container {
+    margin: 20px 15px;
+    padding: 15px 20px;
+  }
+
+  .logs-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .logs-table {
+    font-size: 14px;
+    min-width: 600px;
+  }
+
+  .logs-table th,
+  .logs-table td {
+    padding: 10px 12px;
+  }
+
+  .message-cell {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logs-container {
+    margin: 15px 10px;
+    padding: 10px 12px;
+  }
+
+  .logs-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .logs-table {
+    font-size: 13px;
+    min-width: 100%;
+    border-spacing: 0 8px;
+  }
+
+  .logs-table th,
+  .logs-table td {
+    padding: 8px 10px;
+  }
+
+  .message-cell {
+    max-width: 150px;
+  }
+
+  .status-cell {
+    width: 75px;
+    padding: 5px 8px;
+  }
+}
