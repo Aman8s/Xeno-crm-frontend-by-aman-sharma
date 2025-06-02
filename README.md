@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Xeno CRM - Frontend (React.js)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🌐 Overview
 
-## Available Scripts
+This is the frontend part of the Xeno CRM system. It is built using *React.js* and provides a user-friendly interface for:
 
-In the project directory, you can run:
+* Google authentication
+* Creating smart customer segments
+* AI-based rule generation
+* Managing and visualizing campaign communication logs
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🔧 Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* *React.js* (with functional components and hooks)
+* *Axios* for HTTP requests
+* *Firebase Auth* (Google login)
+* *React Router DOM* for routing
+* *Netlify* for deployment
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Folder Structure
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+frontend/
+├── public/                  # Public assets
+├── src/
+│   ├── pages/               # Page components (CampaignBuilder, CampaignLogs, etc.)
+│   ├── App.js               # App routing and protected routes
+│   ├── firebase.js          # Firebase configuration
+│   └── index.js             # Entry point
+└── .env                     # Environment config (not committed)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🔐 Environment Variables
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create a .env file inside the frontend/ folder:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+env
+REACT_APP_API_URL=https://xeno-crm-backend.onrender.com
+REACT_APP_FIREBASE_API_KEY=your-firebase-api-key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your-app.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=your-project-id
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> ⚠ Make sure these are prefixed with REACT_APP_ as required by React.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 How to Run Locally
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bash
+cd frontend
+npm install
+npm start
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Frontend will run on:
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+http://localhost:3000
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Make sure the backend is running at the correct API URL.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔐 Authentication (Google OAuth)
 
-### Deployment
+* Uses Firebase Auth to authenticate users
+* Only authenticated users can access campaign creation and logs
+* User state is stored in localStorage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🌟 Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* *Login Page*: Sign in via Google
+* *Campaign Builder*:
+
+  * Manually define segmentation rules
+  * Use AI (OpenAI) to generate rules from plain English
+* *Campaign Logs*:
+
+  * View SENT / FAILED delivery results
+  * Time-stamped logs per customer per campaign
+
+---
+
+## 🚀 Deployment (Netlify)
+
+1. Push frontend to GitHub
+2. Go to [https://netlify.com](https://netlify.com)
+3. Create new site → Connect to GitHub repo
+4. Set build settings:
+
+   * *Build command*: npm run build
+   * *Publish directory*: build
+5. Add the same .env values in Netlify dashboard as environment variables
+6. Deploy 🚀
+
+---
+
+## 📜 License
+
+This frontend is for demo and educational purposes only.
+
